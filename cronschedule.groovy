@@ -8,7 +8,7 @@ job('example') {
 }
 
 
-job('example-5') {
+job('example-6') {
     triggers {
         cron('*/3 * * * *')
     }

@@ -32,6 +32,9 @@ job('example-email') {
 }
 
 job('example-email-sec') {
+    steps {
+        shell('exit 2')
+    }
     publishers {
         extendedEmail {
             recipientList('me@halfempty.org')

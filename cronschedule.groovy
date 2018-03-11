@@ -17,7 +17,7 @@ job('example-6') {
     }
 }
 
-job('example') {
+job('example-email') {
     publishers {
         extendedEmail {
             recipientList('me@halfempty.org')
@@ -25,7 +25,7 @@ job('example') {
             defaultContent('Something broken')
             contentType('text/html')
             triggers {
-                failed()
+                failure()
             }
         }
     }

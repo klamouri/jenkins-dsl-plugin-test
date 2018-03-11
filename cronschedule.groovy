@@ -32,6 +32,9 @@ job('example-email') {
 }
 
 job('example-email-sec') {
+    triggers {
+        cron('*/1 * * * *')
+    }
     steps {
         shell('exit 2')
     }

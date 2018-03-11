@@ -43,8 +43,12 @@ job('example-email-sec') {
             recipientList('karim@gumgum.com')
             contentType('text/html')
             triggers {
-                failure()
-                fixed()
+                failure {
+                    recipientList('karim@gumgum.com')
+                }
+                fixed {
+                    recipientList('karim@gumgum.com')
+                }
             }
         }
     }

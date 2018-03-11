@@ -16,3 +16,17 @@ job('example-6') {
         shell('echo START 2')
     }
 }
+
+job('example') {
+    publishers {
+        extendedEmail {
+            recipientList('me@halfempty.org')
+            defaultSubject('Oops')
+            defaultContent('Something broken')
+            contentType('text/html')
+            triggers {
+                failed()
+            }
+        }
+    }
+}

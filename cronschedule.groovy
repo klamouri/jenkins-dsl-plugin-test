@@ -8,9 +8,9 @@ job('example') {
 }
 
 
-job('example-3') {
+job('example-4') {
     triggers {
-        cron('*/4 * * * *')
+        cron('*/3 * * * *')
     }
     steps {
         shell('echo START 2')

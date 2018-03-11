@@ -37,17 +37,16 @@ job('example-email-sec') {
     }
     publishers {
         extendedEmail {
-            recipientList('me@halfempty.org')
-            defaultSubject('Oops')
-            defaultContent('Something broken')
+            recipientList('karim@gumgum.com')
             contentType('text/html')
             triggers {
-                secondFailure()
+                failure()
+                fixed()
             }
         }
     }
     configure { project ->
-        def failureTriggerNode = project / publishers / 'hudson.plugins.emailext.ExtendedEmailPublisher' / 'configuredTriggers' / 'hudson.plugins.emailext.plugins.trigger.SecondFailureTrigger'
+        def failureTriggerNode = project / publishers / 'hudson.plugins.emailext.ExtendedEmailPublisher' / 'configuredTriggers' / 'hudson.plugins.emailext.plugins.trigger.FailureTrigger'
         failureTriggerNode << requiredFailureCount (5)
         failureTriggerNode.name = 'hudson.plugins.emailext.plugins.trigger.XNthFailureTrigger'
     }

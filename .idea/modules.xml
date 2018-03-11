@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test.iml" filepath="$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test_main.iml" group="jenkins-dsl-plugin-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jenkins-dsl-plugin-test_test.iml" group="jenkins-dsl-plugin-test" />
+    </modules>
+  </component>
+</project>

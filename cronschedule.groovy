@@ -1,6 +1,6 @@
 job('example') {
     triggers {
-        cron('* * * * * *')
+        cron('*/2 * * * *')
     }
     steps {
         shell('echo START')

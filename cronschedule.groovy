@@ -8,14 +8,6 @@ job('example') {
 }
 
 
-job('example-6') {
-    triggers {
-        cron('*/3 * * * *')
-    }
-    steps {
-        shell('echo START 2')
-    }
-}
 
 job('example-email') {
     publishers {

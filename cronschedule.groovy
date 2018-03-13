@@ -23,6 +23,21 @@ job('example-email') {
     }
 }
 
+job('example-email-live') {
+    publishers {
+        extendedEmail {
+            recipientList('me@halfempty.org')
+            defaultSubject('Oops')
+            defaultContent('Something broken')
+            contentType('text/html')
+            triggers {
+                failure()
+            }
+        }
+    }
+}
+
+
 job('example-email-sec') {
     triggers {
         cron('*/1 * * * *')
